@@ -29,7 +29,7 @@ ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2011
 
 HOMEPAGE_URL: str = None
 # e.g. "https://some.com/dataset/homepage"
@@ -37,7 +37,7 @@ HOMEPAGE_URL: str = None
 PREVIEW_IMAGE_ID: int = 8263183
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/staver"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
