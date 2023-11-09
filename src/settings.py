@@ -13,8 +13,8 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "StaVer"
+PROJECT_NAME_FULL: str = "StaVer: Stamp Verification"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
