@@ -24,8 +24,8 @@ LICENSE: License = None
 APPLICATIONS: List[Union[Industry, Domain, Research]] = None
 CATEGORY: Category = None
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
@@ -34,7 +34,7 @@ if RELEASE_DATE is None:
 HOMEPAGE_URL: str = None
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 8263183
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = None
@@ -43,7 +43,7 @@ GITHUB_URL: str = None
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "http://madm.dfki.de/downloads-ds-staver"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,19 +51,19 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = ["https://www.researchgate.net/publication/224265585_Stamp_Detection_in_Color_Document_Images"]
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"some_link_to_repo_if_exists"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"Kaggle":"https://www.kaggle.com/datasets/rtatman/stamp-verification-staver-dataset"}
 
-CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
-AUTHORS_CONTACTS: Optional[List[str]] = None
+CITATION_URL: Optional[str] = "https://www.researchgate.net/publication/224265585_Stamp_Detection_in_Color_Document_Images"
+AUTHORS: Optional[List[str]] = ["Barbora Micenkova", "Joost van Beusekom"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["Barbora.Micenkova@dfki.de", "Joost.van Beusekom@dfki.de"]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Aarhus University (AU), Denmark", "German Research Center for Artiﬁcial Intelligence (DFKI), Germany"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {"__POSTTEXT__": "Also, dataset includes meta-information provided within tags: ***signature***, ***overlap_with_printed_text*** and ***number_of_stamps***"}
 TAGS: Optional[List[str]] = None
 
 
