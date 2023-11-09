@@ -31,7 +31,7 @@ RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = 2011
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "http://madm.dfki.de/downloads-ds-staver"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 8263183
